@@ -1,0 +1,8 @@
+.li-hover:hover{
+  background-color: #d8d8d8;
+  columns : #fff;
+}
+li-selected{
+  color: #fff;
+  background-color: black;
+}
