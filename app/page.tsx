@@ -1,7 +1,8 @@
 // Page principale pour choisir le quiz
 'use client'
 import React, { useState } from "react";
-import Page from "../app/quiz/page";
+import Page from "./quiz/page";
+
 
 const MainPage = () => {
   const [selectedQuiz, setSelectedQuiz] = useState<number | null>(null); // Initialisez selectedQuiz avec null
