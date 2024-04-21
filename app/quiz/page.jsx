@@ -4,7 +4,8 @@ import quizzes from "../quiz/data"
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 
-const Page = ({quizId}) => {
+
+const Page = ({ quizId }) => {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [showResult, setShowResult] = useState(false);
@@ -14,10 +15,8 @@ const Page = ({quizId}) => {
     wrongAnswer: 0,
   });
 
-  
-
- // RÃ©cupÃ©rez les questions et les rÃ©ponses du quiz sÃ©lectionnÃ© en fonction de l'identifiant
- const { questions } = quizzes[`quiz${quizId}`]; // Utilisez l'identifiant pour accÃ©der au bon quiz
+  // Récupérez les questions et les réponses du quiz sélectionné en fonction de l'identifiant
+  const { questions } = quizzes[`quiz${quizId}`]; // Utilisez l'identifiant pour accéder au bon quiz
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
   const onAnswerSelected = (answer, idx) =>{
